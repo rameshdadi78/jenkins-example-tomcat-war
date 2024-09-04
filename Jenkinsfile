@@ -4,7 +4,6 @@ pipeline {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
   }    
   environment {
-    TOMCAT_CREDS=credentials('pi-ssh-key')
     TOMCAT_SERVER="http://192.168.0.112/"
     ROOT_WAR_LOCATION="/opt/tomcat/webapps"
     LOCAL_WAR_DIR="/home/xplmdev/build/dist"
